@@ -1,8 +1,5 @@
-/*----------Alumna: Carbajal Guillén, Katya Reneé-----------*/
-/*---------------------Carnet: CG18064---------------------*/
-/*-----------Guia 61c TPI-2021 CICLO II---------------*/
+var fila = "<tr><td class='nombre'></td><td class='descripcion'></td><td class='imagen'></td><td class='modo_de_juego'></td><td class='lugar_de_juego'></td><td class='lugar_de_juego'></td><td class='cantidad_de_jugadores'></td><td class='herramientas_necesarias'></td><td class='video'></td><td class='nombre_de_categoria'></td><td class='eliminar'></td></tr>";
 
-var fila = "<tr><td class='id'></td><td class='foto'></td><td class='price'></td><td class='title'></td><td class='description'></td><td class='category'></td><td class='eliminar'></td></tr>";
 var productos = null;
 
 function codigoCat(catstr) {
