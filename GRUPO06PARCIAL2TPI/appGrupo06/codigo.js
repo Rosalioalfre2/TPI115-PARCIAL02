@@ -1,6 +1,6 @@
 var fila = "<tr><td class='nombre'></td><td class='descripcion'></td><td class='imagen'></td><td class='modo_de_juego'></td><td class='lugar_de_juego'></td><td class='lugar_de_juego'></td><td class='cantidad_de_jugadores'></td><td class='herramientas_necesarias'></td><td class='video'></td><td class='nombre_de_categoria'></td><td class='eliminar'></td></tr>";
 
-var productos = null;
+var deportes = null;
 
 function codigoCat(catstr) {
 	var code = "null";
