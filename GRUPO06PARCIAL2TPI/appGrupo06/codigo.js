@@ -75,13 +75,16 @@ function obtenerDeportes() {
 
 function agregarProductos() {
 
-	var imagenUrl = document.getElementById("AgregarUrl").value;
-	var precioTxt = document.getElementById("AgregarPrecio").value;
-	var titutoTxt = document.getElementById("AgregarNombre").value;
-	var categoriaTxt = document.getElementById("AgregarCategoria").value;
-	var descripcionTxt = document.getElementById("AgregarDescripcion").value;
+	var titutoTxt = document.getElementById("AddNombre").value;
+	var descripcionTxt = document.getElementById("AddDescripcion").value;
+	var imagenUrl = document.getElementById("AddImagenrUrl").value;
+	var modoTxt = document.getElementById("AddModoDeJuego").value;
+	var terrenoTxt = document.getElementById("AddTerrenoJuego").value;
+	var cantidadJugadores = document.getElementById("AddCantidadJugadores").value;
+	var herramientasNecesarias = document.getElementById("AddHerramientasNecesarias").value;
+	var videURL = document.getElementById("AddVideoUrl").value;
+	var agregarCategoria = document.getElementById("AddCategoria").value;
 
-	precioExReg = /^[0-9]+(\.[0-9]{1,2})?$/;
 	urlExReg = /^[a-z]+:[^:]+$/;
 
 	if(imagenUrl === "" || precioTxt === "" || titutoTxt === "" || categoriaTxt === "" || descripcionTxt === ""){
