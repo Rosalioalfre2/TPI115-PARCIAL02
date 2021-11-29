@@ -1,5 +1,5 @@
 {
-	"deportes":{"item":[
+	"deportes":[
 			{
 				"id":"1",
 				"nombre":"NASCAR",
@@ -240,5 +240,5 @@
 				"video":"https://www.youtube.com/watch?v=9JKZ0xb-F_0",
 				"nombre_de_categoria":"Deportes extremos"
 			}
-		]}
+		]
 }
