@@ -1,4 +1,4 @@
-var fila="<tr><td class='Id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td>Categoria</td><td>Eliminar</td></tr>";
+var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td>Categoria</td><td>Eliminar</td></tr>";
 var deportes=null;
 
 function codigoCat(catstr) {
@@ -15,6 +15,8 @@ var orden=0;
 	  
 function listarDeportes(deportes) {
 	 // var precio=document.getElementById("price"); 
+	 var cantidadJugadores = document.getElementById("jugadores");
+	 cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
 	 var num=deportes.length;
 	  var listado=document.getElementById("listado");
 	  var ids,nombres,descripciones,imagenes,modoDeJuegos,terrenoDeJuegos,cantidadDeJugadoresGlobal,herramientasNecesariasGlobal,videos,nombreDeCategorias;
@@ -35,7 +37,7 @@ function listarDeportes(deportes) {
       nombre_de_categoria=document.getElementsByClassName("nombre_ de_categoria"); 
 	  borrar=document.getElementsByClassName("Opciones");*/
 
-	  ids=document.getElementsByClassName("Id");
+	  ids=document.getElementsByClassName("id");
 		nombres=document.getElementsByClassName("Nombre");
 		descripciones=document.getElementsByClassName("Descripcion");
 		imagenes=document.getElementsByClassName("Imagen");
@@ -47,23 +49,24 @@ function listarDeportes(deportes) {
 		nombreDeCategorias=document.getElementsByClassName("Categoria");
 		accion=document.getElementsByClassName("Eliminar");
 		//borrar=document.getElementsByClassName("Opciones");
-	/*  if(orden===0) {
-		  orden=-1;precio.innerHTML="Precio"
+	  if(orden===0) {
+		  orden=-1;cantidadJugadores.innerHTML="Cantidad jugadores"
 		}
 	  else{
 	     if(orden==1) {
-			 ordenarAsc(deportes,"Precio");
-			 precio.innerHTML="Precio Ascendente";
-			 precio.style.color="darkgreen";
+			 ordenarAsc(deportes,"Cantidad");
+			 cantidadJugadores.innerHTML="Cantidad jugadores ascendente";
+			 cantidadJugadores.style.color="darkgreen";
 			}
 	     else{
 			if(orden==-1) {
-				ordenarDesc(deportes,"Precio");
-				precio.innerHTML="Precio Descendente";
-				precio.style.color="blue";
+				ordenarDesc(deportes,"Cantidad");
+				cantidadJugadores.innerHTML="Cantidad jugadores descendente";
+				cantidadJugadores.style.color="blue";
 				}
 			}
-	  }*/
+	  }
+	  formagregar.style.display="block";
 		listado.style.display="block";
         for(nfila=0;nfila<num;nfila++) {
 
@@ -90,7 +93,7 @@ function listarDeportes(deportes) {
 	}
 
 function obtenerDeportes() {
-	fetch('http://localhost:3000/deportes')
+	fetch('http://localhost:3000/deportes/')
 	.then(res=>res.json())
 	.then(data=>{
 		deportes=data;
@@ -180,7 +183,7 @@ function agregarDeportes(){
 				video:videoUrl,
 				nombre_de_categoria:nombreDeCategoriaTxt
 			}
-			fetch('http://localhost:3000/deportes',
+			fetch('http://localhost:3000/deportes/',
 			{ method:"POST",
 				body: JSON.stringify(deporte),
 				headers: {
@@ -230,7 +233,7 @@ function eliminar(id) {
 			obtenerDeportes();
 			alert("Se ha eliminado el deporte N° " + id);
 }
-/*
+
 function ordenarDesc(p_array_json, p_key) {
 	p_array_json.sort(function (a, b) {
 	   if(a[p_key] > b[p_key]) return -1;
@@ -246,4 +249,3 @@ function ordenarDesc(p_array_json, p_key) {
  return 0;
 	});
  }
- */

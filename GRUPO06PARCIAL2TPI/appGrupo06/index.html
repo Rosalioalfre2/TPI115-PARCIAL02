@@ -133,7 +133,7 @@
 	</div>
 	<br>
 	<div id="listado" style="display:none;">
-		<form name="filtroprods" id="filtroprods">
+		<form name="filtrodeportes" id="filtrodeportes">
 			Seleccione Categorias
 			<input type="checkbox" id="c1" value="c1" checked>Deportes de motor
 			<input type="checkbox" id="c2" value="c2" checked>Deportes de pelota
@@ -148,15 +148,17 @@
 			<table id="tabla">
 				<thead>
 					<tr>
+						<th>id</th>
 						<th>Nombre</th>
 						<th>Descripción</th>
 						<th>Imagen</th>
 						<th>Modo juego</th>
 						<th>Terreno de juego</th>
-						<th>Cantidad de jugadires en el mundo</th>
+						<th id="jugadores">Cantidad de jugadores en el mundo</th>
 						<th>Herramientas necesarias</th>
 						<th>Video</th>
 						<th>Categoria</th>
+						<th>Eliminar</th>
 					</tr>
 				</thead>
 				<tbody id="tbody"></tbody>
