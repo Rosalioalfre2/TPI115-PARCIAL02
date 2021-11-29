@@ -29,7 +29,7 @@
 <body>
 	<h1>Deportes - TPI-2021  </h1>
 
-	<!-- <button onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button> -->
+	<!-- <button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button> -->
 
 	<div id="formagregar">
 		<form class="formagregar">
@@ -116,17 +116,18 @@
 					</div>
 				</div>
 			</div>
-			<button onclick="agregarProductos()">Agregar deporte</button>
+			<button onclick="agregarDeportes()">Agregar deporte</button>
+			<p><button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button></p>
 		 </form>
 	</div>
 	<br>
-	<div id="listado">
+	<div id="listado" style="display:none;">
 		<form name="filtroprods" id="filtroprods">
 			Seleccione Categorias
-			<input type="checkbox" id="c1" value="c1" checked> Deportes de motor
-			<input type="checkbox" id="c2" value="c2" checked> Deportes de pelota
-			<input type="checkbox" id="c3" value="c3" checked> Deportes de tiro
-			<input type="checkbox" id="c4" value="c4" checked> Deportes extremos
+			<input type="checkbox" id="c1" value="c1" checked>Deportes de motor
+			<input type="checkbox" id="c2" value="c2" checked>Deportes de pelota
+			<input type="checkbox" id="c3" value="c3" checked>Deportes de tiro
+			<input type="checkbox" id="c4" value="c4" checked>Deportes extremos
 
 			<ol>
 				<li>Click en la imagen para Acercamiento</li>
