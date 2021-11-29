@@ -14,10 +14,12 @@ function codigoCat(catstr) {
 var orden=0;
 	  
 function listarDeportes(deportes) {
+	
 	 // var precio=document.getElementById("price"); 
 	 var cantidadJugadores = document.getElementById("jugadores");
 	 cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
 	 var num=deportes.length;
+	 
 	  var listado=document.getElementById("listado");
 	  var ids,nombres,descripciones,imagenes,modoDeJuegos,terrenoDeJuegos,cantidadDeJugadoresGlobal,herramientasNecesariasGlobal,videos,nombreDeCategorias;
 	  var tbody=document.getElementById("tbody"),nfila=0;
@@ -52,20 +54,19 @@ function listarDeportes(deportes) {
 	  if(orden===0) {
 		  orden=-1;cantidadJugadores.innerHTML="Cantidad jugadores"
 		}
-	  else{
+	  else
 	     if(orden==1) {
 			 ordenarAsc(deportes,"Cantidad");
 			 cantidadJugadores.innerHTML="Cantidad jugadores ascendente";
 			 cantidadJugadores.style.color="darkgreen";
 			}
-	     else{
+	     else
 			if(orden==-1) {
 				ordenarDesc(deportes,"Cantidad");
 				cantidadJugadores.innerHTML="Cantidad jugadores descendente";
 				cantidadJugadores.style.color="blue";
 				}
-			}
-	  }
+	  
 	  formagregar.style.display="block";
 		listado.style.display="block";
         for(nfila=0;nfila<num;nfila++) {
@@ -95,15 +96,14 @@ function listarDeportes(deportes) {
 function obtenerDeportes() {
 	fetch('http://localhost:3000/deportes/')
 	.then(res=>res.json())
-	.then(data=>{
-		deportes=data;
+	.then(data => {
+		deportes = data;
 		deportes.forEach(
 			function(deporte){
 				//deporte.cantidad_de_jugadores=parseFloat(cantidad_de_jugadores.Precio)
 				deporte.cantidad_de_jugadores=parseInt(producto.cantidad_de_jugadores)
 			});
-		listarDeportes(data)
-	})
+		listarDeportes(data)})
 }
 
 
