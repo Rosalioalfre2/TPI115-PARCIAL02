@@ -1,3 +1,13 @@
+obtenerDeportes()
+/*fetch('http://localhost:3000/deportes')
+	.then(res=>res.json())
+	.then(data => {
+		data.forEach(deporte => {
+			console.log(deporte.nombre)
+		});	
+	})
+	.catch(err => console.log(err))
+*/
 var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td>Categoria</td><td>Eliminar</td></tr>";
 var deportes=null;
 
@@ -94,22 +104,24 @@ function listarDeportes(deportes) {
 	}
 
 function obtenerDeportes() {
-	fetch('http://localhost:3000/deportes/')
+	fetch('http://localhost:3000/deportes')
 	.then(res=>res.json())
 	.then(data => {
-		deportes = data;
-		deportes.forEach(
-			function(deporte){
-				//deporte.cantidad_de_jugadores=parseFloat(cantidad_de_jugadores.Precio)
-				deporte.cantidad_de_jugadores=parseInt(producto.cantidad_de_jugadores)
-			});
-		listarDeportes(data)})
+		deportes=data;
+		deportes.forEach(deporte => {
+			console.log(deporte.nombre)
+			deporte.cantidad_de_jugadores=parseInt(deporte.cantidad_de_jugadores)
+			console.log(deporte.cantidad_de_jugadores)
+		});
+		listarDeportes(deportes)
+	})
+	.catch(err => console.log(err))
 }
 
 
-window.addEventListener("load", function(){
+/*window.addEventListener("load", function(){
 	document.getElementById("nombre").focus();
-});
+});*/
 
 function agregarDeportes(){
 	
@@ -248,4 +260,4 @@ function ordenarDesc(p_array_json, p_key) {
  if(a[p_key] < b[p_key]) return -1;
  return 0;
 	});
- }
+}
