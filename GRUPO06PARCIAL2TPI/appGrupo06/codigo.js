@@ -180,12 +180,16 @@ function quitarOrdenar(){
 	obtenerDeportes();
 }
 
-var id;
-function eliminar(id) {
+ var id;
+function eliminarDeportes(id) {
 	fetch('http://localhost:3000/deportes/'+id, { method: "DELETE" }).then(response => response.json()).then(data => deportes = data);
 			obtenerDeportes();
-			alert("Se ha eliminado el deporte N° " + id);
-}
+			alert("Se ha eliminado el deporte N° " + id); }
+
+
+
+
+
 
 function ordenarDesc(p_array_json, p_key) {
 	p_array_json.sort(function (a, b) {
