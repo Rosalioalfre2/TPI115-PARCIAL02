@@ -1,14 +1,6 @@
 obtenerDeportes()
-/*fetch('http://localhost:3000/deportes')
-	.then(res=>res.json())
-	.then(data => {
-		data.forEach(deporte => {
-			console.log(deporte.nombre)
-		});	
-	})
-	.catch(err => console.log(err))
-*/
-var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td>Categoria</td><td>Eliminar</td></tr>";
+
+var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td class='Categoria'></td><td class='Eliminar'></td></tr>";
 var deportes=null;
 
 function codigoCat(catstr) {
@@ -24,84 +16,65 @@ function codigoCat(catstr) {
 var orden=0;
 	  
 function listarDeportes(deportes) {
-	
-	 // var precio=document.getElementById("price"); 
-	 var cantidadJugadores = document.getElementById("jugadores");
-	 cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
-	 var num=deportes.length;
-	 
-	  var listado=document.getElementById("listado");
-	  var ids,nombres,descripciones,imagenes,modoDeJuegos,terrenoDeJuegos,cantidadDeJugadoresGlobal,herramientasNecesariasGlobal,videos,nombreDeCategorias;
-	  var tbody=document.getElementById("tbody"),nfila=0;
-	  tbody.innerHTML="";
-	  var catcode;
-	  for(i=0;i<num;i++) tbody.innerHTML+=fila;
-	  var tr; 
-	 /*ids=document.getElementsByClassName("id");
-	  nombre=document.getElementsByClassName("nombre");
-      descripcion=document.getElementsByClassName("descripcion"); 
-	  imagen=document.getElementsByClassName("imagen");  
-	  modo_de_juego=document.getElementsByClassName("modo_de_juego"); 
-	  lugar_de_juego=document.getElementsByClassName("lugar_de_juego"); 
-	  cantidad_de_jugadores=document.getElementsByClassName("cantidad_de_jugadores"); 
-	  herramientas_necesarias=document.getElementsByClassName("herramientas_necesarias"); 
-	  video=document.getElementsByClassName("video");  
-      nombre_de_categoria=document.getElementsByClassName("nombre_ de_categoria"); 
-	  borrar=document.getElementsByClassName("Opciones");*/
-
-	  ids=document.getElementsByClassName("id");
-		nombres=document.getElementsByClassName("Nombre");
-		descripciones=document.getElementsByClassName("Descripcion");
-		imagenes=document.getElementsByClassName("Imagen");
-		modoDeJuegos=document.getElementsByClassName("Modo");
-		terrenoDeJuegos=document.getElementsByClassName("Terreno");
-		cantidadDeJugadoresGlobal=document.getElementsByClassName("Cantidad");
-		herramientasNecesariasGlobal=document.getElementsByClassName("Herramientas");
-		videos=document.getElementsByClassName("Video");
-		nombreDeCategorias=document.getElementsByClassName("Categoria");
-		accion=document.getElementsByClassName("Eliminar");
-		//borrar=document.getElementsByClassName("Opciones");
-	  if(orden===0) {
-		  orden=-1;cantidadJugadores.innerHTML="Cantidad jugadores"
+	var cantidadJugadores = document.getElementById("jugadores");
+	cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
+	var num=deportes.length;
+	var listado=document.getElementById("listado");
+	var ids,nombres,descripciones,imagenes,modoDeJuegos,terrenoDeJuegos,cantidadDeJugadoresGlobal,herramientasNecesariasGlobal,videos,nombreDeCategorias;
+	var tbody=document.getElementById("tbody"),nfila=0;
+	tbody.innerHTML="";
+	var catcode;
+	for(i=0;i<num;i++) tbody.innerHTML+=fila;
+	var tr; 
+	ids=document.getElementsByClassName("id");
+	nombres=document.getElementsByClassName("Nombre");
+	descripciones=document.getElementsByClassName("Descripcion");
+	imagenes=document.getElementsByClassName("Imagen");
+	modoDeJuegos=document.getElementsByClassName("Modo");
+	terrenoDeJuegos=document.getElementsByClassName("Terreno");
+	cantidadDeJugadoresGlobal=document.getElementsByClassName("Cantidad");
+	herramientasNecesariasGlobal=document.getElementsByClassName("Herramientas");
+	videos=document.getElementsByClassName("Video");
+	nombreDeCategorias=document.getElementsByClassName("Categoria");
+	accion=document.getElementsByClassName("Eliminar");
+	if(orden===0) {
+		orden=-1;cantidadJugadores.innerHTML="Cantidad jugadores"
+	}
+	else
+		if(orden==1) {
+			ordenarAsc(deportes,"Cantidad");
+			cantidadJugadores.innerHTML="Cantidad jugadores ascendente";
+			cantidadJugadores.style.color="darkgreen";
 		}
-	  else
-	     if(orden==1) {
-			 ordenarAsc(deportes,"Cantidad");
-			 cantidadJugadores.innerHTML="Cantidad jugadores ascendente";
-			 cantidadJugadores.style.color="darkgreen";
-			}
-	     else
+		else
 			if(orden==-1) {
 				ordenarDesc(deportes,"Cantidad");
 				cantidadJugadores.innerHTML="Cantidad jugadores descendente";
 				cantidadJugadores.style.color="blue";
-				}
-	  
-	  formagregar.style.display="block";
-		listado.style.display="block";
-        for(nfila=0;nfila<num;nfila++) {
-
-            	ids[nfila].innerHTML=deportes[nfila].id;
-                nombres[nfila].innerHTML=deportes[nfila].nombre;
-                descripciones[nfila].innerHTML=deportes[nfila].descripcion;
-				modoDeJuegos[nfila].innerHTML = deportes[nfila].modo_de_juego;
-				terrenoDeJuegos[nfila].innerHTML = deportes[nfila].terreno_de_juego;
-				cantidadDeJugadoresGlobal[nfila].innerHTML = deportes[nfila].cantidad_de_jugadores;
-				herramientasNecesariasGlobal[nfila].innerHTML = deportes[nfila].herramientas_necesarias;
-				videos[nfila].innerHTML = deportes[nfila].video;
-				nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
-                catcode=codigoCat(deportes[nfila].nombre_de_categoria);
-                tr=categories[nfila].parentElement;
-                tr.setAttribute("class",catcode);
-               // price[nfila].innerHTML="$"+deportes[nfila].Precio;
-                //imagenes[nfila].innerHTML= deportes[nfila].imagen;
-                imagenes[nfila].innerHTML="<img src='"+deportes[nfila].imagen+"'>";
-                //video[nfila].innerHTML="<iframe src='https://www.youtube.com/embed/Hlr2KIbm4Y0'></iframe>";
-				videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
-				accion[nfila].innerHTML = "<button>Eliminar</button>";
-				accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
-            }
+				} 
+	formagregar.style.display="block";
+	listado.style.display="block";
+	for(nfila=0;nfila<num;nfila++) {
+		ids[nfila].innerHTML=deportes[nfila].id;
+		nombres[nfila].innerHTML=deportes[nfila].nombre;
+		descripciones[nfila].innerHTML=deportes[nfila].descripcion;
+		imagenes[nfila].innerHTML="<img src='"+deportes[nfila].imagen+"'>";
+		modoDeJuegos[nfila].innerHTML = deportes[nfila].modo_de_juego;
+		terrenoDeJuegos[nfila].innerHTML = deportes[nfila].terreno_de_juego;
+		cantidadDeJugadoresGlobal[nfila].innerHTML = deportes[nfila].cantidad_de_jugadores;
+		herramientasNecesariasGlobal[nfila].innerHTML = deportes[nfila].herramientas_necesarias;
+		//videos[nfila].innerHTML = deportes[nfila].video;
+		//video[nfila].innerHTML="<iframe src='"+deportes[nfila].video+"'></iframe>";
+		videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
+		nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
+		//catcode=codigoCat(deportes[nfila].nombre_de_categoria);
+		//tr=categories[nfila].parentElement;
+		//tr.setAttribute("class",catcode);
+		accion[nfila].innerHTML = "<button>Eliminar</button>";
+		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
+		console.log(deportes[nfila].nombre_de_categoria)
 	}
+}
 
 function obtenerDeportes() {
 	fetch('http://localhost:3000/deportes')
@@ -109,13 +82,14 @@ function obtenerDeportes() {
 	.then(data => {
 		deportes=data;
 		deportes.forEach(deporte => {
-			console.log(deporte.nombre)
+			//console.log(deporte.nombre)
 			deporte.cantidad_de_jugadores=parseInt(deporte.cantidad_de_jugadores)
-			console.log(deporte.cantidad_de_jugadores)
+			//console.log(deporte.cantidad_de_jugadores)
+			//console.log(deporte.nombre_de_categoria)
 		});
 		listarDeportes(deportes)
 	})
-	.catch(err => console.log(err))
+	//.catch(err => console.log(err))
 }
 
 
@@ -124,17 +98,6 @@ function obtenerDeportes() {
 });*/
 
 function agregarDeportes(){
-	
-	/*nombre=document.getElementsByClassName("nombre").value.toString().trim();
-	descripcion=document.getElementsByClassName("descripcion").value.toString().trim(); 
-	imagen=document.getElementsByClassName("imagen").value.toString().trim();  
-	modo_de_juego=document.getElementsByClassName("modo_de_juego").value.toString().trim(); 
-	lugar_de_juego=document.getElementsByClassName("lugar_de_juego").value.toString().trim(); 
-	cantidad_de_jugadores=document.getElementsByClassName("cantidad_de_jugadores").value.toString().trim(); 
-	herramientas_necesarias=document.getElementsByClassName("herramientas_necesarias").value.toString().trim(); 
-	video=document.getElementsByClassName("video").value.toString().trim();
-	nombre_de_categoria=document.getElementsByClassName("nombre_de_categoria").value.toString().trim();*/
-	
 	var nombreTxt=document.getElementById("AddNombre").value;
 	var descripcionTxt=document.getElementById("AddDescripcion").value;
 	var imagenUrl=document.getElementById("AddImagenUrl").value;
@@ -148,39 +111,31 @@ function agregarDeportes(){
 	
 	if(nombreTxt==""){
 		alert("No se permiten campos vacíos. Escriba un nombre.");
-		document.getElementById("AddNombre").value="";
 		document.getElementById("AddNombre").focus();
 	}else if(descripcionTxt==""){
 		alert("No se permiten campos vacíos. Agregué una descripción.");
-		document.getElementById("AddDescripcion").value="";
 		document.getElementById("AddDescripcion").focus();
 	}else if(imagenUrl==""){
 		alert("No se permiten campos vacíos. Agregue una dirección de imagen.");
-		document.getElementById("AddImagenUrl").value="";
+		//document.getElementById("AddImagenUrl").value="";
 		document.getElementById("AddImagenUrl").focus();
 	}else if(modoDeJuegoTxt==""){
 		alert("No se permiten campos vacíos. Seleccione un modo de juego.");
-		document.getElementById("AddModoJuego").value="";
 		document.getElementById("AddModoJuego").focus();
 	}else if(terrenoDeJuegoTxt==""){
 		alert("No se permiten campos vacíos. Seleccione un terreno de juego.");
-		document.getElementById("AddTerrenoJuego").value="";
 		document.getElementById("AddTerrenoJuego").focus();
 	}else if(herramientasNecesariasTxt==""){
 		alert("No se permiten campos vacíos. Agregué las herramientas necesarias.");
-		document.getElementById("AddHerramientasNecesarias").value="";
 		document.getElementById("AddHerramientasNecesarias").focus();
 	}else if(videoUrl==""){
 		alert("No se permiten campos vacíos. Agregue una dirección de video.");
-		document.getElementById("AddVideoUrl").value="";
 		document.getElementById("AddVideoUrl").focus();
 	}else if(cantidadDeJugadoresTxt==""){
 		alert("No se permiten campos vacíos. Agregue una cantidad de jugadores.");
-		document.getElementById("AddCantidadJugadores").value="";
 		document.getElementById("AddCantidadJugadores").focus();
 	}else if(nombreDeCategoriaTxt==""){
 		alert("No se permiten campos vacíos. Seleccione una categoria.");
-		document.getElementById("AddCategoria").value="";
 		document.getElementById("AddCategoria").focus();
 	}else{
 		if(document.getElementById("AddCantidadJugadores").value>=0){
@@ -203,22 +158,8 @@ function agregarDeportes(){
 					'Content-type': 'application/json; charset=UTF-8',	   
 				 }
 			})
-			.then(response=>response.json())
-			.then(data=>{deportes = data; obtenerDeportes()});
+			obtenerDeportes()
 			alert("Se agregó el deporte: "+nombreTxt);
-			/*
-			document.getElementById('nombre').value="";
-			document.getElementById('descripcion').value="";
-			document.getElementById('imagen').value="";
-			document.getElementById('modo_de_juego').value="";
-			document.getElementById('lugar_de_juego').value="";
-			document.getElementById('cantidad_de_jugadores').value="";
-			document.getElementById('herramientas_necesesarias').value="";
-			document.getElementById('video').value="";
-			document.getElementById('nombre_de_categoria').value="";
-			orden*=0;
-			window. location. reload();
-			*/
 		}
 	}
 }
