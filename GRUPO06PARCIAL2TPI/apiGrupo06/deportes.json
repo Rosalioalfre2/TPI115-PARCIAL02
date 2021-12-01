@@ -178,7 +178,7 @@
       "cantidad_de_jugadores": "65000000",
       "herramientas_necesarias": "Campo, bola, bate, guantes, casco, ropa receptor o catcher.",
       "video": "https://www.youtube.com/watch?v=HzsPQQdziHs",
-      "nombre_de_categoria": "Deportes de pelota."
+      "nombre_de_categoria": "Deportes de pelota"
     },
     {
       "id": "16",
@@ -239,18 +239,6 @@
       "herramientas_necesarias": "Traje de baño, gorro de baño, gafas o googles, toalla, chanclas.",
       "video": "https://www.youtube.com/watch?v=9JKZ0xb-F_0",
       "nombre_de_categoria": "Deportes extremos"
-    },
-    {
-      "nombre": "r",
-      "descripcion": "r",
-      "imagen": "r",
-      "modo_de_juego": "Individual",
-      "terreno_de_juego": "Acuático",
-      "cantidad_de_jugadores": "7",
-      "herramientas_necesarias": "r",
-      "video": "r",
-      "nombre_de_categoria": "Deportes de motor",
-      "id": "Nf50zmT"
     },
     {
       "nombre": "r",

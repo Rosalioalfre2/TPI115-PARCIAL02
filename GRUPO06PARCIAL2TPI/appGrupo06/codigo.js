@@ -19,6 +19,7 @@ function listarDeportes(deportes) {
 	var cantidadJugadores = document.getElementById("jugadores");
 	cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
 	var num=deportes.length;
+	var formagregar = document.getElementById("formagregar");
 	var listado=document.getElementById("listado");
 	var ids,nombres,descripciones,imagenes,modoDeJuegos,terrenoDeJuegos,cantidadDeJugadoresGlobal,herramientasNecesariasGlobal,videos,nombreDeCategorias;
 	var tbody=document.getElementById("tbody"),nfila=0;
@@ -51,7 +52,7 @@ function listarDeportes(deportes) {
 				ordenarDesc(deportes,"Cantidad");
 				cantidadJugadores.innerHTML="Cantidad jugadores descendente";
 				cantidadJugadores.style.color="blue";
-				} 
+			} 
 	formagregar.style.display="block";
 	listado.style.display="block";
 	for(nfila=0;nfila<num;nfila++) {
@@ -67,9 +68,9 @@ function listarDeportes(deportes) {
 		//video[nfila].innerHTML="<iframe src='"+deportes[nfila].video+"'></iframe>";
 		videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
 		nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
-		//catcode=codigoCat(deportes[nfila].nombre_de_categoria);
-		//tr=categories[nfila].parentElement;
-		//tr.setAttribute("class",catcode);
+		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
+		tr=nombreDeCategorias[nfila].parentElement;
+		tr.setAttribute("class",catcode);
 		accion[nfila].innerHTML = "<button>Eliminar</button>";
 		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
 		console.log(deportes[nfila].nombre_de_categoria)
@@ -158,8 +159,8 @@ function agregarDeportes(){
 					'Content-type': 'application/json; charset=UTF-8',	   
 				 }
 			})
-			obtenerDeportes()
-			alert("Se agregó el deporte: "+nombreTxt);
+		obtenerDeportes()
+		alert("Se agregó el deporte: "+nombreTxt);
 		}
 	}
 }
