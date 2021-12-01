@@ -39,19 +39,19 @@ function listarDeportes(deportes) {
 	nombreDeCategorias=document.getElementsByClassName("Categoria");
 	accion=document.getElementsByClassName("Eliminar");
 	if(orden===0) {
-		orden=-1;cantidadJugadores.innerHTML="Cantidad jugadores"
+		orden=-1;cantidadJugadores.innerHTML="Cantidad de jugadores en el mundo"
 	}
 	else
 		if(orden==1) {
-			ordenarAsc(deportes,"Cantidad");
-			cantidadJugadores.innerHTML="Cantidad jugadores ascendente";
-			cantidadJugadores.style.color="darkgreen";
+			ordenarAsc(deportes,"cantidad_de_jugadores");
+			cantidadJugadores.innerHTML="Cantidad de jugadores en el mundo (ascendente)";
+			cantidadJugadores.style.color="lightgreen";
 		}
 		else
 			if(orden==-1) {
-				ordenarDesc(deportes,"Cantidad");
-				cantidadJugadores.innerHTML="Cantidad jugadores descendente";
-				cantidadJugadores.style.color="blue";
+				ordenarDesc(deportes,"cantidad_de_jugadores");
+				cantidadJugadores.innerHTML="Cantidad de jugadores en el mundo (descendente)";
+				cantidadJugadores.style.color="red";
 			} 
 	formagregar.style.display="block";
 	listado.style.display="block";
@@ -165,7 +165,7 @@ function agregarDeportes(){
 	}
 }
 
-function ordenarPre(){
+/*function ordenarPre(){
 	let btnquitarordenar=document.getElementById("quitarOrdenarbtn");
 	orden*= -1;
 	listarDeportes(deportes);
@@ -179,7 +179,7 @@ function quitarOrdenar(){
 	precio.style.color="black";
 	btnquitarordenar.style.display="none";
 	obtenerDeportes();
-}
+}*/
 
  var id;
 function eliminarDeportes(id) {
