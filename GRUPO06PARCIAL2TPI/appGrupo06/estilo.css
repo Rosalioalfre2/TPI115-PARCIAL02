@@ -1,25 +1,22 @@
-/*----------Alumna: Carbajal Guillén, Katya Reneé-----------*/
-/*---------------------Carnet: CG18064---------------------*/
-/*-----------Guia 61c Guia TPI-2021 CICLO II---------------*/
-
-
 body{
     margin: 30px;
 }
 
 img {
-  width: 3cm;
-  height: 3cm;
+  width: 5.60cm;
+  height: 3.15cm;
   padding: 15px;
+  min-width: 5.6cm;
+  min-height: 3.15cm;
 }
 
 table {
-  width: 80%;
+  width: 100%;
   margin: auto;
   border: 2px solid;
   border-collapse: collapse;
   text-align: justify;
-  color: black !important;
+  color: #000 !important;
   font-size: 16px !important;
 }
 
@@ -44,7 +41,7 @@ ol {
   }
 
 thead {
-    background-color: #18365f;
+    background-color: #5f1818;
     width: 100%;
     text-align: center;
     border: 2px rgb(0, 0, 0) solid;
@@ -56,16 +53,16 @@ th{
     padding-bottom: 5px;
     padding-top: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fafeff;
+    color: #fff;
 
 }
 
 tr td{
     
     padding: 5px;
-    border: 2px rgb(0, 0, 0) solid;
+    border: 2px #000 solid;
     text-align: center;
-    background-color: #3ba1bb;
+    background-color: #bb3b3bc9;
     width: 1%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -104,26 +101,26 @@ h1{
   
 }
 
+h2{
+  text-align: center;
+}
+
 p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 20%;
     color: #442fbe;
     font-size: 17px;
- 
-     
 }
 
 form{
-    padding-left: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2a078b;
     font-size: 17px;
-    padding-left: 10%;
    
 }
 
 body{
-    background-color: #add8e6;;
+    background-color: lightgray;
 }
 
 #botonAgregar{
