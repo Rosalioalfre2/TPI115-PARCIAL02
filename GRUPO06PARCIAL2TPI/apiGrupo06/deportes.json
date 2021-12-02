@@ -239,6 +239,18 @@
       "herramientas_necesarias": "Traje de baño, gorro de baño, gafas o googles, toalla, chanclas.",
       "video": "https://www.youtube.com/embed/9JKZ0xb-F_0",
       "nombre_de_categoria": "Deportes extremos"
+    },
+    {
+      "nombre": "prueba",
+      "descripcion": "prueba",
+      "imagen": "prueba",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Acuático",
+      "cantidad_de_jugadores": "4",
+      "herramientas_necesarias": "prueba",
+      "video": "prueba",
+      "nombre_de_categoria": "Deportes de motor",
+      "id": "IQadpuv"
     }
   ]
 }

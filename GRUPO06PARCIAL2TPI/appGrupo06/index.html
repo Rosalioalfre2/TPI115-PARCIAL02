@@ -138,12 +138,23 @@
 	<div id="listado" style="display:none;">
 		<form name="filtrodeportes" id="filtrodeportes">
 			<h2>Seleccione Categorias</h2>
-				<input type="checkbox" id="c1" value="c1" checked>  Deportes de motor | 
-				<input type="checkbox" id="c2" value="c2" checked>  Deportes de pelota | 
-				<input type="checkbox" id="c3" value="c3" checked>  Deportes de tiro | 
-				<input type="checkbox" id="c4" value="c4" checked> Deportes extremos | 
+				<input type="checkbox" id="c1" value="c1" checked>  Deportes de motor |  
+				<input type="checkbox" id="c2" value="c2" checked>  Deportes de pelota |  
+				<input type="checkbox" id="c3" value="c3" checked>  Deportes de tiro |  
+				<input type="checkbox" id="c4" value="c4" checked> Deportes extremos |  
 			<br>
-			<p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p>
+			<table id="ordenamiento">
+				<tr>
+					<td><p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p></td>
+					<td><button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button></td>
+				</tr>
+			</table>
+
+			<!--p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p>
+			<div id="botonAgregar">
+				<button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button>
+			</div-->
+			<br>
 <!-- 			<ol>
 				<li>Click en la imagen para Acercamiento</li>
 				<li>Click en precio para ordenar Asc o Desc</li>
@@ -152,7 +163,7 @@
 			<table id="tabla">
 				<thead>
 					<tr>
-						<th>id</th>
+						<!--th>id</th>
 						<th>Nombre</th>
 						<th>Descripción</th>
 						<th>Imagen</th>
@@ -162,7 +173,12 @@
 						<th>Herramientas necesarias</th>
 						<th>Video</th>
 						<th>Categoria</th>
-						<th>Eliminar</th>
+						<th>Eliminar</th-->
+						<th >id</th>
+						<th colspan='2'>Información relevante del deporte.</th>
+						<th id="jugadores">Jugadores</th>
+						<th>Multimedia</th>
+						<th>Acción</th>
 					</tr>
 				</thead>
 				<tbody id="tbody"></tbody>

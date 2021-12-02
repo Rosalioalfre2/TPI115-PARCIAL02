@@ -67,6 +67,10 @@ tr td{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.Nombre, .Cantidad, .Modo, .Eliminar, .Modo, .Imagen, .Terreno, .Categoria, .Descripcion, .Video, .Herramientas, .id{
+  background-color: #e68888c9;
+}
+
 input#c1:checked ~ table tbody tr.c1 {
   display: table-row;
 }
@@ -127,4 +131,19 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Separador{
+  background: transparent;
+  padding: 5px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  height: 30px;
+}
+
+table#ordenamiento{
+  background-color: #fff;
+  border: #fff;
 }
