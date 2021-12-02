@@ -1,7 +1,7 @@
 obtenerDeportes()
 
 //var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td class='Categoria'></td><td class='Eliminar'></td></tr>";
-var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr><td colspan='6' class='Separador'></td></tr>";
+var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr style='border-rigth: hidden'><td colspan='6' class='Separador'></td></tr>";
 
 var deportes=null;
 
@@ -185,38 +185,17 @@ function agregarDeportes(){
 					'Content-type': 'application/json; charset=UTF-8',	   
 				 }
 			})
-		obtenerDeportes()
 		alert("Se agregó el deporte: "+nombreTxt);
+		obtenerDeportes()
 		}
 	}
 }
-
-/*function ordenarPre(){
-	let btnquitarordenar=document.getElementById("quitarOrdenarbtn");
-	orden*= -1;
-	listarDeportes(deportes);
-	btnquitarordenar.style.display="inline";
-}
-
-function quitarOrdenar(){
-	let btnquitarordenar=document.getElementById("quitarOrdenarbtn");
-	var precio=document.getElementById("price"); 
-	orden = 0;
-	precio.style.color="black";
-	btnquitarordenar.style.display="none";
-	obtenerDeportes();
-}*/
 
  var id;
 function eliminarDeportes(id) {
 	fetch('http://localhost:3000/deportes/'+id, { method: "DELETE" }).then(response => response.json()).then(data => deportes = data);
 			obtenerDeportes();
 			alert("Se ha eliminado el deporte N° " + id); }
-
-
-
-
-
 
 function ordenarDesc(p_array_json, p_key) {
 	p_array_json.sort(function (a, b) {

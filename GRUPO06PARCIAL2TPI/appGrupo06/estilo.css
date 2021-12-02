@@ -132,3 +132,18 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.Separador{
+  background: transparent;
+  padding: 5px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  height: 30px;
+}
+
+table#ordenamiento{
+  background-color: #fff;
+  border: #fff;
+}
