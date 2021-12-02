@@ -66,12 +66,13 @@ function listarDeportes(deportes) {
 		herramientasNecesariasGlobal[nfila].innerHTML = deportes[nfila].herramientas_necesarias;
 		//videos[nfila].innerHTML = deportes[nfila].video;
 		//video[nfila].innerHTML="<iframe src='"+deportes[nfila].video+"'></iframe>";
-		videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
+		//videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
+		videos[nfila].innerHTML="<iframe width=\"400\" height=\"225\" src=\"" + deportes[nfila].video + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 		nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
 		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
 		tr=nombreDeCategorias[nfila].parentElement;
 		tr.setAttribute("class",catcode);
-		accion[nfila].innerHTML = "<button>Eliminar</button>";
+		accion[nfila].innerHTML = "<button id=\"botonEliminar\" type=\"button\" class=\"btn btn-danger\">Eliminar</button>";
 		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
 		console.log(deportes[nfila].nombre_de_categoria)
 	}

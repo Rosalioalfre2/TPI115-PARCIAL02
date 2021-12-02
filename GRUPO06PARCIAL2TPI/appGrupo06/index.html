@@ -127,23 +127,29 @@
 					</div>
 				</div>
 			</div>
-			<button onclick="agregarDeportes()">Agregar deporte</button>
-			<p><button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button></p>
+			<div id="botonAgregar">
+				<button type="button" class="btn btn-success" onclick="agregarDeportes()">Agregar deporte</button>
+			</div>
+<!-- 			<button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button> -->
 		 </form>
 	</div>
+
 	<br>
 	<div id="listado" style="display:none;">
 		<form name="filtrodeportes" id="filtrodeportes">
-			Seleccione Categorias
-			<input type="checkbox" id="c1" value="c1" checked>Deportes de motor
-			<input type="checkbox" id="c2" value="c2" checked>Deportes de pelota
-			<input type="checkbox" id="c3" value="c3" checked>Deportes de tiro
-			<input type="checkbox" id="c4" value="c4" checked>Deportes extremos
-
-			<ol>
+			<h2>Seleccione Categorias</h2>
+			<div id="recuadros">
+				<input type="checkbox" id="c1" value="c1" checked>  Deportes de motor | 
+				<input type="checkbox" id="c2" value="c2" checked>  Deportes de pelota | 
+				<input type="checkbox" id="c3" value="c3" checked>  Deportes de tiro | 
+				<input type="checkbox" id="c4" value="c4" checked> Deportes extremos | 
+			</div>
+			<br>
+			<p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p>
+<!-- 			<ol>
 				<li>Click en la imagen para Acercamiento</li>
-				<!-- <li>Click en precio para ordenar Asc o Desc</li> -->
-			</ol>
+				<li>Click en precio para ordenar Asc o Desc</li>
+			</ol> -->
 
 			<table id="tabla">
 				<thead>

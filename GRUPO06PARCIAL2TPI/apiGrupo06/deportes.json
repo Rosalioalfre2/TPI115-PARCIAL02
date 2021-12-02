@@ -9,7 +9,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "20000",
       "herramientas_necesarias": "vehículos adecuados según especificaciones de NASCAR, pistas de carreras en general ovaladas",
-      "video": "https://www.youtube.com/watch?v=Z0zvuwPc-rA",
+      "video": "https://www.youtube.com/embed/Z0zvuwPc-rA",
       "nombre_de_categoria": "Deportes de motor"
     },
     {
@@ -21,7 +21,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "70000",
       "herramientas_necesarias": "Vehículos aptos para circular por carreteras públicas por lo que deben estar matriculados y dotados de los mismos elementos obligatorios que el resto de coches como los faros, la rueda de repuesto o los intermitentes",
-      "video": "https://www.youtube.com/watch?v=qBNanZHIsw0",
+      "video": "https://www.youtube.com/embed/qBNanZHIsw0",
       "nombre_de_categoria": "Deportes de motor"
     },
     {
@@ -33,7 +33,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "90000",
       "herramientas_necesarias": "Motocicletas para motocross, casco, vestimenta protectora.",
-      "video": "https://www.youtube.com/watch?v=9EHCTuPDmvg",
+      "video": "https://www.youtube.com/embed/9EHCTuPDmvg",
       "nombre_de_categoria": "Deportes de motor"
     },
     {
@@ -45,7 +45,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "75000",
       "herramientas_necesarias": "Motocicleta, bicicleta, cascos, lentes, celular",
-      "video": "https://www.youtube.com/watch?v=gAt3Q6IJJWM",
+      "video": "https://www.youtube.com/embed/gAt3Q6IJJWM",
       "nombre_de_categoria": "Deportes de motor"
     },
     {
@@ -57,7 +57,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "518000000",
       "herramientas_necesarias": "bicicleta, casco, gafas, equipo protector, botella de agua, telefono, barras energéticas.",
-      "video": "https://www.youtube.com/watch?v=6VgBdbEymm8",
+      "video": "https://www.youtube.com/embed/6VgBdbEymm8",
       "nombre_de_categoria": "Deportes de motor"
     },
     {
@@ -69,7 +69,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "700000",
       "herramientas_necesarias": "Armas de fuego, diana, equipo de protección personal, gafas protectoras, protección auditiva.",
-      "video": "https://www.youtube.com/watch?v=fZM_AvYqgWI",
+      "video": "https://www.youtube.com/embed/fZM_AvYqgWI",
       "nombre_de_categoria": "Deportes de tiro"
     },
     {
@@ -81,7 +81,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "550000",
       "herramientas_necesarias": "Arcos, flechas, diana",
-      "video": "https://www.youtube.com/watch?v=yCQfHVukBoA",
+      "video": "https://www.youtube.com/embed/yCQfHVukBoA",
       "nombre_de_categoria": "Deportes de tiro"
     },
     {
@@ -93,7 +93,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "600000",
       "herramientas_necesarias": "Armas de fuego, escopetas, hélices, equipo de protección personal, gafas protectoras, protección auditiva.",
-      "video": "https://www.youtube.com/watch?v=1R-OsrRd_Fs",
+      "video": "https://www.youtube.com/embed/1R-OsrRd_Fs",
       "nombre_de_categoria": "Deportes de tiro"
     },
     {
@@ -105,7 +105,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "150000",
       "herramientas_necesarias": "Bala de acero solido. Un peso de 7,26 kg para hombres y 4kg para mujeres.",
-      "video": "https://www.youtube.com/watch?v=zHdEYhivsTQ",
+      "video": "https://www.youtube.com/embed/zHdEYhivsTQ",
       "nombre_de_categoria": "Deportes de tiro"
     },
     {
@@ -117,7 +117,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "60000000",
       "herramientas_necesarias": "Palos de golf, pelota de golf, guantes, tees, spikes.",
-      "video": "https://www.youtube.com/watch?v=QNj6UM_JdJs",
+      "video": "https://www.youtube.com/embed/QNj6UM_JdJs",
       "nombre_de_categoria": "Deportes de tiro"
     },
     {
@@ -129,7 +129,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "1000000000",
       "herramientas_necesarias": "Cancha, portería, pelota de fútbol",
-      "video": "https://www.youtube.com/watch?v=IVIcVwu9eXM",
+      "video": "https://www.youtube.com/embed/IVIcVwu9eXM",
       "nombre_de_categoria": "Deportes de pelota"
     },
     {
@@ -141,7 +141,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "400000000",
       "herramientas_necesarias": "Cancha de baloncesto, balón de baloncesto, canastas.",
-      "video": "https://www.youtube.com/watch?v=5F_HNvP0nZY",
+      "video": "https://www.youtube.com/embed/5F_HNvP0nZY",
       "nombre_de_categoria": "Deportes de pelota"
     },
     {
@@ -153,7 +153,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "300000000",
       "herramientas_necesarias": "Cancha de tenis, pelota de tenis, raqueta.",
-      "video": "https://www.youtube.com/watch?v=Wj7AnLCd8Pk",
+      "video": "https://www.youtube.com/embed/Wj7AnLCd8Pk",
       "nombre_de_categoria": "Deportes de pelota"
     },
     {
@@ -165,7 +165,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "3000000",
       "herramientas_necesarias": null,
-      "video": "https://www.youtube.com/watch?v=7WQLSH2q_0s",
+      "video": "https://www.youtube.com/embed/7WQLSH2q_0s",
       "nombre_de_categoria": "Deportes de pelota"
     },
     {
@@ -177,7 +177,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "65000000",
       "herramientas_necesarias": "Campo, bola, bate, guantes, casco, ropa receptor o catcher.",
-      "video": "https://www.youtube.com/watch?v=HzsPQQdziHs",
+      "video": "https://www.youtube.com/embed/HzsPQQdziHs",
       "nombre_de_categoria": "Deportes de pelota"
     },
     {
@@ -189,7 +189,7 @@
       "terreno_de_juego": "Aéreo",
       "cantidad_de_jugadores": "400000",
       "herramientas_necesarias": "Dos paracaidas (el principal y el de emergencia, arnés, casco, altímetro, guantes y gafas, activador automático.",
-      "video": "https://www.youtube.com/watch?v=9IfbsJkD6ZE",
+      "video": "https://www.youtube.com/embed/9IfbsJkD6ZE",
       "nombre_de_categoria": "Deportes extremos"
     },
     {
@@ -201,7 +201,7 @@
       "terreno_de_juego": "Acuático",
       "cantidad_de_jugadores": "26000000",
       "herramientas_necesarias": "Tabla de surf, traje de surf, gorro, invento o leash, quillas, parafina, grip, escarpine, guantes, protección solar.",
-      "video": "https://www.youtube.com/watch?v=TEaJmMEq0b4",
+      "video": "https://www.youtube.com/embed/TEaJmMEq0b4",
       "nombre_de_categoria": "Deportes extremos"
     },
     {
@@ -213,7 +213,7 @@
       "terreno_de_juego": "Acuático",
       "cantidad_de_jugadores": "450000",
       "herramientas_necesarias": "Embarcación (balsa, kayak, etc), remos especiales para ríos, chaleco, casco, traje de neopreno, calzado apropiado, cuchilo, teléfono para emergencias, botiquín de primeros auxilios.",
-      "video": "https://www.youtube.com/watch?v=rgvfePVrMps",
+      "video": "https://www.youtube.com/embed/rgvfePVrMps",
       "nombre_de_categoria": "Deportes extremos"
     },
     {
@@ -225,7 +225,7 @@
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": "130000000",
       "herramientas_necesarias": "Tablas y fijaciones, bastones de esquí, botas, ropa de esquí térmica, guantes impermeables, crema solar, teléfono, lentes.",
-      "video": "https://www.youtube.com/watch?v=VSN0tWW7ZF8",
+      "video": "https://www.youtube.com/embed/VSN0tWW7ZF8",
       "nombre_de_categoria": "Deportes extremos"
     },
     {
@@ -237,32 +237,8 @@
       "terreno_de_juego": "Acuático",
       "cantidad_de_jugadores": "1500000000",
       "herramientas_necesarias": "Traje de baño, gorro de baño, gafas o googles, toalla, chanclas.",
-      "video": "https://www.youtube.com/watch?v=9JKZ0xb-F_0",
+      "video": "https://www.youtube.com/embed/9JKZ0xb-F_0",
       "nombre_de_categoria": "Deportes extremos"
-    },
-    {
-      "nombre": "r",
-      "descripcion": "r",
-      "imagen": "rosalio.com",
-      "modo_de_juego": "Individual",
-      "terreno_de_juego": "Acuático",
-      "cantidad_de_jugadores": "7",
-      "herramientas_necesarias": "r",
-      "video": "r",
-      "nombre_de_categoria": "Deportes de motor",
-      "id": "VhtPoKr"
-    },
-    {
-      "nombre": "r",
-      "descripcion": "r",
-      "imagen": "rosalio.com",
-      "modo_de_juego": "Individual",
-      "terreno_de_juego": "Acuático",
-      "cantidad_de_jugadores": "7",
-      "herramientas_necesarias": "r",
-      "video": "r",
-      "nombre_de_categoria": "Deportes de motor",
-      "id": "_LqaYMg"
     }
   ]
 }
