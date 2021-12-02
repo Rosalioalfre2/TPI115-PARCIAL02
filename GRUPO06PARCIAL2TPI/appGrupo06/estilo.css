@@ -1,22 +1,25 @@
+/*----------Alumna: Carbajal Guillén, Katya Reneé-----------*/
+/*---------------------Carnet: CG18064---------------------*/
+/*-----------Guia 61c Guia TPI-2021 CICLO II---------------*/
+
+
 body{
     margin: 30px;
 }
 
 img {
-  width: 5.60cm;
-  height: 3.15cm;
+  width: 3cm;
+  height: 3cm;
   padding: 15px;
-  min-width: 5.6cm;
-  min-height: 3.15cm;
 }
 
 table {
-  width: 100%;
+  width: 80%;
   margin: auto;
   border: 2px solid;
   border-collapse: collapse;
   text-align: justify;
-  color: #000 !important;
+  color: black !important;
   font-size: 16px !important;
 }
 
@@ -41,7 +44,7 @@ ol {
   }
 
 thead {
-    background-color: #5f1818;
+    background-color: #18365f;
     width: 100%;
     text-align: center;
     border: 2px rgb(0, 0, 0) solid;
@@ -53,16 +56,16 @@ th{
     padding-bottom: 5px;
     padding-top: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    color: #fafeff;
 
 }
 
 tr td{
     
     padding: 5px;
-    border: 2px #000 solid;
+    border: 2px rgb(0, 0, 0) solid;
     text-align: center;
-    background-color: #bb3b3bc9;
+    background-color: #3ba1bb;
     width: 1%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -101,37 +104,38 @@ h1{
   
 }
 
-h2{
-  text-align: center;
-}
-
 p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 20%;
     color: #442fbe;
     font-size: 17px;
+ 
+     
 }
 
 form{
+    padding-left: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2a078b;
     font-size: 17px;
+    padding-left: 10%;
    
 }
 
 body{
-    background-color: lightgray;
+    background-color: #add8e6;;
 }
 
-#botonAgregar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#recuadros{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
+button{
+    background-color: #185dc5;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 30px;
 }
