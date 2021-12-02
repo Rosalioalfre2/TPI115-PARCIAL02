@@ -72,7 +72,7 @@ function listarDeportes(deportes) {
 		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
 		tr=nombreDeCategorias[nfila].parentElement;
 		tr.setAttribute("class",catcode);
-		accion[nfila].innerHTML = "<button id=\"botonEliminar\" type=\"button\" class=\"btn btn-warning\">Eliminar</button>";
+		accion[nfila].innerHTML = "<button id=\"botonEliminar\" type=\"button\" class=\"btn btn-danger\">Eliminar</button>";
 		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
 		console.log(deportes[nfila].nombre_de_categoria)
 	}
