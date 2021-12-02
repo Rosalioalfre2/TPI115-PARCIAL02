@@ -123,11 +123,19 @@ form{
 }
 
 body{
-    background-color: lightgray;
+    background-color: #add8e6;;
 }
 
-#botonAgregar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+button{
+    background-color: #185dc5;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 30px;
 }
