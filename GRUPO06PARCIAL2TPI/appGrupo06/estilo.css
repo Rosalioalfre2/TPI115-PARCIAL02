@@ -67,6 +67,10 @@ tr td{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.Nombre, .Cantidad, .Modo, .Eliminar, .Modo, .Imagen, .Terreno, .Categoria, .Descripcion, .Video, .Herramientas, .id{
+  background-color: #e68888c9;
+}
+
 input#c1:checked ~ table tbody tr.c1 {
   display: table-row;
 }

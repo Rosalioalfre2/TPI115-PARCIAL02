@@ -1,6 +1,8 @@
 obtenerDeportes()
 
-var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td class='Categoria'></td><td class='Eliminar'></td></tr>";
+//var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td class='Categoria'></td><td class='Eliminar'></td></tr>";
+var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr><td colspan='6' class='Separador'></td></tr>";
+
 var deportes=null;
 
 function codigoCat(catstr) {
@@ -61,6 +63,7 @@ function listarDeportes(deportes) {
 		descripciones[nfila].innerHTML=deportes[nfila].descripcion;
 		imagenes[nfila].innerHTML="<img src='"+deportes[nfila].imagen+"'>";
 		modoDeJuegos[nfila].innerHTML = deportes[nfila].modo_de_juego;
+		
 		terrenoDeJuegos[nfila].innerHTML = deportes[nfila].terreno_de_juego;
 		cantidadDeJugadoresGlobal[nfila].innerHTML = deportes[nfila].cantidad_de_jugadores;
 		herramientasNecesariasGlobal[nfila].innerHTML = deportes[nfila].herramientas_necesarias;
@@ -70,10 +73,32 @@ function listarDeportes(deportes) {
 		videos[nfila].innerHTML="<iframe width=\"400\" height=\"225\" src=\"" + deportes[nfila].video + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 		nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
 		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
+		//tr=nombreDeCategorias[nfila].parentElement;
+		//tr.setAttribute("class",catcode);
+		accion[nfila].innerHTML = "<button id=\"botonModificar\" type=\"button\" class=\"btn btn-warning\">Modificar</button><br><br><br><br><button id=\"botonEliminar\" type=\"button\" class=\"btn btn-danger\">Eliminar</button>";
+		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
+		tr=accion[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		//catcode=codigoCat(deportes[nfila].nombre_de_categoria);
+		tr=modoDeJuegos[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		tr=terrenoDeJuegos[nfila].parentElement;
+		tr.setAttribute("class",catcode);
 		tr=nombreDeCategorias[nfila].parentElement;
 		tr.setAttribute("class",catcode);
-		accion[nfila].innerHTML = "<button id=\"botonEliminar\" type=\"button\" class=\"btn btn-danger\">Eliminar</button>";
-		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
+		tr=descripciones[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		tr=herramientasNecesariasGlobal[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		var separador=document.getElementsByClassName("Separador");
+		tr=separador[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		var separador=document.getElementsByClassName("EncabezadoDescripcion");
+		tr=separador[nfila].parentElement;
+		tr.setAttribute("class",catcode);
+		var separador=document.getElementsByClassName("EncabezadoHerramientas");
+		tr=separador[nfila].parentElement;
+		tr.setAttribute("class",catcode);
 		console.log(deportes[nfila].nombre_de_categoria)
 	}
 }
