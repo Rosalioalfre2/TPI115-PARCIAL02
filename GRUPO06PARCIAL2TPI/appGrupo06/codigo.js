@@ -75,8 +75,8 @@ function listarDeportes(deportes) {
 		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
 		//tr=nombreDeCategorias[nfila].parentElement;
 		//tr.setAttribute("class",catcode);
-		accion[nfila].innerHTML = "<button id=\"botonModificar\" type=\"button\" class=\"btn btn-warning\">Modificar</button><br><br><br><br><button id=\"botonEliminar\" type=\"button\" class=\"btn btn-danger\">Eliminar</button>";
-		accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
+		accion[nfila].innerHTML = "<button id='botonModificar' type='button' class='btn btn-warning' onclick="+"modificarDeportes('"+deportes[nfila].id+"');>Modificar</button><br><br><br><br><button id='botonEliminar' type='button' class='btn btn-danger' onclick="+"eliminarDeportes('"+deportes[nfila].id+"');>Eliminar</button>";
+		//accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
 		tr=accion[nfila].parentElement;
 		tr.setAttribute("class",catcode);
 		//catcode=codigoCat(deportes[nfila].nombre_de_categoria);
@@ -191,11 +191,16 @@ function agregarDeportes(){
 	}
 }
 
- var id;
+var id;
+function modificarDeportes(id){
+	alert("Funciona la direccion del boton modificar id modificado: "+id);
+}
+
 function eliminarDeportes(id) {
 	fetch('http://localhost:3000/deportes/'+id, { method: "DELETE" }).then(response => response.json()).then(data => deportes = data);
-			obtenerDeportes();
-			alert("Se ha eliminado el deporte N° " + id); }
+	alert("Se ha eliminado el deporte N° " + id);
+	obtenerDeportes()
+}
 
 function ordenarDesc(p_array_json, p_key) {
 	p_array_json.sort(function (a, b) {
