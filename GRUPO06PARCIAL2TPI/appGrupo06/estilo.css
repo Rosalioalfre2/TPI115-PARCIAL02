@@ -126,16 +126,15 @@ body{
     background-color: #add8e6;;
 }
 
-button{
-    background-color: #185dc5;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    font-size: 16px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 30px;
+#botonAgregar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#recuadros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
 }
