@@ -104,7 +104,7 @@
       "modo_de_juego": "En equipo",
       "terreno_de_juego": "Terrestre",
       "cantidad_de_jugadores": 3000000,
-      "herramientas_necesarias": null,
+      "herramientas_necesarias": "Balón de futbol, porterías.",
       "video": "https://www.youtube.com/embed/7WQLSH2q_0s",
       "id_categoria": 2
     },
