@@ -4,20 +4,22 @@ obtenerDeportes()
 var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr style='border-rigth: hidden'><td colspan='6' class='Separador'></td></tr>";
 
 var deportes=null;
+var categorias=null;
 
 function codigoCat(catstr) {
 	var code="null";
 	switch(catstr) {
-		case "Deportes de motor": code = "c1"; break;
-		case "Deportes de pelota": code = "c2"; break;
-		case "Deportes de tiro": code = "c3"; break;
-		case "Deportes extremos": code = "c4"; break;
+		case 1: code = "c1"; break;
+		case 2: code = "c2"; break;
+		case 3: code = "c3"; break;
+		case 4: code = "c4"; break;
 	}
 	return code;
 }
-var orden=0;
-	  
+
+
 function listarDeportes(deportes) {
+	var orden=0;
 	var cantidadJugadores = document.getElementById("jugadores");
 	cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
 	var num=deportes.length;
@@ -28,7 +30,7 @@ function listarDeportes(deportes) {
 	tbody.innerHTML="";
 	var catcode;
 	for(i=0;i<num;i++) tbody.innerHTML+=fila;
-	var tr; 
+	var tr;
 	ids=document.getElementsByClassName("id");
 	nombres=document.getElementsByClassName("Nombre");
 	descripciones=document.getElementsByClassName("Descripcion");
@@ -71,8 +73,21 @@ function listarDeportes(deportes) {
 		//video[nfila].innerHTML="<iframe src='"+deportes[nfila].video+"'></iframe>";
 		//videos[nfila].innerHTML="<a href='"+deportes[nfila].video+"' target='_blank'>"+ deportes[nfila].video +"</a>";
 		videos[nfila].innerHTML="<iframe width=\"400\" height=\"225\" src=\"" + deportes[nfila].video + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
-		nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
-		catcode=codigoCat(deportes[nfila].nombre_de_categoria);
+		//nombreDeCategorias[nfila].innerHTML = deportes[nfila].nombre_de_categoria;
+		//nombreDeCategorias[nfila].innerHTML = asignarDeporte(categorias);
+		switch(deportes[nfila].id_categoria){
+			case 1: nombreDeCategorias[nfila].innerHTML=categorias[0].nombre;break;
+			case 2: nombreDeCategorias[nfila].innerHTML=categorias[1].nombre;break;
+			case 3: nombreDeCategorias[nfila].innerHTML=categorias[2].nombre;break;
+			case 4: nombreDeCategorias[nfila].innerHTML=categorias[3].nombre;break;
+		}/*
+		switch(deportes[nfila].id_categoria){
+			case 1: nombreDeCategorias[nfila].innerHTML="Deportes de motor";break;
+			case 2: nombreDeCategorias[nfila].innerHTML="Deportes de pelota";break;
+			case 3: nombreDeCategorias[nfila].innerHTML="Deportes de tiro";break;
+			case 4: nombreDeCategorias[nfila].innerHTML="Deportes extremos";break;
+		}*/
+		catcode=codigoCat(deportes[nfila].id_categoria);
 		//tr=nombreDeCategorias[nfila].parentElement;
 		//tr.setAttribute("class",catcode);
 		accion[nfila].innerHTML = "<button id='botonModificar' type='button' class='btn btn-warning' onclick="+"modificarDeportes('"+deportes[nfila].id+"');>Modificar</button><br><br><br><br><button id='botonEliminar' type='button' class='btn btn-danger' onclick="+"eliminarDeportes('"+deportes[nfila].id+"');>Eliminar</button>";
@@ -110,15 +125,24 @@ function obtenerDeportes() {
 		deportes=data;
 		deportes.forEach(deporte => {
 			//console.log(deporte.nombre)
-			deporte.cantidad_de_jugadores=parseInt(deporte.cantidad_de_jugadores)
+			//deporte.cantidad_de_jugadores=parseInt(deporte.cantidad_de_jugadores)
 			//console.log(deporte.cantidad_de_jugadores)
-			//console.log(deporte.nombre_de_categoria)
+			console.log(deporte.id_categoria)
 		});
 		listarDeportes(deportes)
+		
+	})
+	fetch('http://localhost:3000/categorias')
+	.then(res => res.json())
+	.then(data =>{
+		categorias=data;
+		categorias.forEach(categoria =>{
+			console.log(categoria.nombre)
+		});
 	})
 	//.catch(err => console.log(err))
+	
 }
-
 
 /*window.addEventListener("load", function(){
 	document.getElementById("nombre").focus();
@@ -130,12 +154,17 @@ function agregarDeportes(){
 	var imagenUrl=document.getElementById("AddImagenUrl").value;
 	var modoDeJuegoTxt=document.getElementById("AddModoJuego").value;
 	var terrenoDeJuegoTxt=document.getElementById("AddTerrenoJuego").value;
-	var cantidadDeJugadoresTxt=document.getElementById("AddCantidadJugadores").value;
+	var cantidadDeJugadoresTxt=parseInt(document.getElementById("AddCantidadJugadores").value);
 	var herramientasNecesariasTxt=document.getElementById("AddHerramientasNecesarias").value;
 	var videoUrl=document.getElementById("AddVideoUrl").value;
 	var nombreDeCategoriaTxt=document.getElementById("AddCategoria").value;
-	
-	
+	var codigoCategoria
+	switch(nombreDeCategoriaTxt){
+		case "Deportes de motor": codigoCategoria=1;break;
+		case "Deportes de pelota": codigoCategoria=2;break;
+		case "Deportes de tiro": codigoCategoria=3; break;
+		case "Deportes extremos": codigoCategoria=4;break;
+	}
 	if(nombreTxt==""){
 		alert("No se permiten campos vacíos. Escriba un nombre.");
 		document.getElementById("AddNombre").focus();
@@ -175,7 +204,7 @@ function agregarDeportes(){
 				cantidad_de_jugadores:cantidadDeJugadoresTxt,
 				herramientas_necesarias:herramientasNecesariasTxt,
 				video:videoUrl,
-				nombre_de_categoria:nombreDeCategoriaTxt
+				id_categoria:codigoCategoria
 			}
 			fetch('http://localhost:3000/deportes/',
 			{ method:"POST",
@@ -185,6 +214,16 @@ function agregarDeportes(){
 					'Content-type': 'application/json; charset=UTF-8',	   
 				 }
 			})
+
+		document.getElementById("AddNombre").value="";
+		document.getElementById("AddDescripcion").value="";
+		document.getElementById("AddImagenUrl").value="";
+		document.getElementById("AddModoJuego").value="";
+		document.getElementById("AddTerrenoJuego").value="";
+		document.getElementById("AddCantidadJugadores").value="";
+		document.getElementById("AddHerramientasNecesarias").value="";
+		document.getElementById("AddVideoUrl").value="";
+		document.getElementById("AddCategoria").value="";
 		alert("Se agregó el deporte: "+nombreTxt);
 		obtenerDeportes()
 		}
@@ -193,7 +232,8 @@ function agregarDeportes(){
 
 var id;
 function modificarDeportes(id){
-	alert("Funciona la direccion del boton modificar id modificado: "+id);
+	//alert("Funciona la direccion del boton modificar id modificado: "+id);
+	alert("nombre de deporte 1"+categorias[0].nombre);
 }
 
 function eliminarDeportes(id) {
