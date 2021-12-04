@@ -1,7 +1,7 @@
 obtenerDeportes()
 
 //var fila="<tr><td class='id'></td><td class='Nombre'></td><td class='Descripcion'></td><td class='Imagen'></td> <td class='Modo'></td><td class='Terreno'></td><td class='Cantidad'></td><td class='Herramientas'></td><td class='Video'></td><td class='Categoria'></td><td class='Eliminar'></td></tr>";
-var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr style='border-rigth: hidden'><td colspan='6' class='Separador'></td></tr>";
+var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr style='border: inset 0pt'><td colspan='6' class='Separador' style=' border: inset 0pt'></td></tr>";
 
 var deportes=null;
 var categorias=null;
@@ -63,7 +63,7 @@ function listarDeportes(deportes) {
 		ids[nfila].innerHTML=deportes[nfila].id;
 		nombres[nfila].innerHTML=deportes[nfila].nombre;
 		descripciones[nfila].innerHTML=deportes[nfila].descripcion;
-		imagenes[nfila].innerHTML="<img src='"+deportes[nfila].imagen+"'>";
+		imagenes[nfila].innerHTML="<img class='imagenesDeportes' src='"+deportes[nfila].imagen+"'>";
 		modoDeJuegos[nfila].innerHTML = deportes[nfila].modo_de_juego;
 		
 		terrenoDeJuegos[nfila].innerHTML = deportes[nfila].terreno_de_juego;
@@ -90,7 +90,7 @@ function listarDeportes(deportes) {
 		catcode=codigoCat(deportes[nfila].id_categoria);
 		//tr=nombreDeCategorias[nfila].parentElement;
 		//tr.setAttribute("class",catcode);
-		accion[nfila].innerHTML = "<button id='botonModificar' type='button' class='btn btn-warning' onclick="+"modificarDeportes('"+deportes[nfila].id+"');>Modificar</button><br><br><br><br><button id='botonEliminar' type='button' class='btn btn-danger' onclick="+"eliminarDeportes('"+deportes[nfila].id+"');>Eliminar</button>";
+		accion[nfila].innerHTML = "<button id='botonVentanaModificar' type='button' class='btn btn-warning' onclick="+"ventanaModificarDeportes('"+deportes[nfila].id+"');>Modificar</button><br><br><br><br><button id='botonEliminar' type='button' class='btn btn-danger' onclick="+"eliminarDeportes('"+deportes[nfila].id+"');>Eliminar</button>";
 		//accion[nfila].firstChild.setAttribute("onclick","eliminarDeportes('" + deportes[nfila].id + "');");
 		tr=accion[nfila].parentElement;
 		tr.setAttribute("class",catcode);
@@ -231,9 +231,74 @@ function agregarDeportes(){
 }
 
 var id;
-function modificarDeportes(id){
+function ventanaModificarDeportes(id){
 	//alert("Funciona la direccion del boton modificar id modificado: "+id);
-	alert("nombre de deporte 1"+categorias[0].nombre);
+	//alert("nombre de deporte 1"+categorias[0].nombre);
+	//var ventModificar=document.getElementById("ventanaModificar");
+	id=id-1;
+	document.getElementById("ModificarNombre").value=deportes[id].nombre;
+	document.getElementById("ModificarDescripcion").value=deportes[id].descripcion;
+	document.getElementById("ModificarImagenUrl").value=deportes[id].imagen;
+	document.getElementById("ModificarModoJuego").value=deportes[id].modo_de_juego;
+	document.getElementById("ModificarTerrenoJuego").value=deportes[id].terreno_de_juego;
+	document.getElementById("ModificarCantidadJugadores").value=deportes[id].cantidad_de_jugadores;
+	document.getElementById("ModificarHerramientasNecesarias").value=deportes[id].herramientas_necesarias;
+	document.getElementById("ModificarVideoUrl").value=deportes[id].video;
+	switch(deportes[id].id_categoria){
+		case 1: document.getElementById("ModificarCategoria").value=categorias[0].nombre;break;
+		case 2: document.getElementById("ModificarCategoria").value=categorias[1].nombre;break;
+		case 3: document.getElementById("ModificarCategoria").value=categorias[2].nombre;break;
+		case 4: document.getElementById("ModificarCategoria").value=categorias[3].nombre;break;
+	}
+	document.getElementById("modificarDeportes").setAttribute("onclick","modificarDeportes('" +id+ "');");
+	document.getElementById("ventanaModificar").style.display="block";
+}
+
+function modificarDeportes(id){
+	id=parseInt(id);
+	id=id+1;
+	var stringid=id;
+	var modificarId=id
+	var modificarNombre=document.getElementById("ModificarNombre").value;
+	var modificarDescripcion=document.getElementById("ModificarDescripcion").value;
+	var ModificarImagenUrl=document.getElementById("ModificarImagenUrl").value;
+	var ModificarModoJuego=document.getElementById("ModificarModoJuego").value;
+	var ModificarTerrenoJuego=document.getElementById("ModificarTerrenoJuego").value;
+	var ModificarCantidadJugadores=parseInt(document.getElementById("ModificarCantidadJugadores").value);
+	var modificarHerramientasNecesarias=document.getElementById("ModificarHerramientasNecesarias").value;
+	var modificarVideoUrl=document.getElementById("ModificarVideoUrl").value
+	var modificarIdCategoria=document.getElementById("ModificarCategoria").value;
+	switch(modificarIdCategoria){
+		case "Deportes de motor": modificarIdCategoria=1;break;
+		case "Deportes de pelota": modificarIdCategoria=2;break;
+		case "Deportes de tiro": modificarIdCategoria=3;break;
+		case "Deportes extremos": modificarIdCategoria=4;break;
+	}
+	var deporteModificado={
+		id:modificarId,
+		nombre:modificarNombre,
+		descripcion:modificarDescripcion,
+		imagen:ModificarImagenUrl,
+		modo_de_juego:ModificarModoJuego,
+		terreno_de_juego:ModificarTerrenoJuego,
+		cantidad_de_jugadores:ModificarCantidadJugadores,
+		herramientas_necesarias:modificarHerramientasNecesarias,
+		video:modificarVideoUrl,
+		id_categoria:modificarIdCategoria
+	}
+	fetch('http://localhost:3000/deportes/'+stringid,
+	{
+		method: "PUT",
+		headers: {'Content-type': 'application/json; charset=UTF-8'},
+		body: JSON.stringify(deporteModificado)
+	})
+	.then(res => res.json())
+	alert("Se modifico el deporte con id "+stringid);
+	obtenerDeportes()
+}
+
+function cerrarVentanaModificacion(){
+	document.getElementById("ventanaModificar").style.display="none";
 }
 
 function eliminarDeportes(id) {
