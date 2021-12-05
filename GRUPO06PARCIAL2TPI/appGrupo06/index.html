@@ -27,9 +27,104 @@
 </head>
 
 <body>
+	<div class="ventanaModificar" id="ventanaModificar">
+		<div id="cerrar"><a onclick="cerrarVentanaModificacion()"><img src="imagenes/cerrar.png"></a></div>
+		<p>Modificar deporte</p>
+		<div class="row">
+			<div class="col">
+				<p>Nombre</p>
+			</div>
+			<div class="col">
+				<input type="text" id="ModificarNombre">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Descripción</p>
+			</div>
+			<div class="col">
+				<input type="text" id="ModificarDescripcion">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Url de imagen</p>
+			</div>
+			<div class="col">
+				<input type="url" id="ModificarImagenUrl">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Modo de juego</p>
+			</div>
+			<div class="col">
+				<select id="ModificarModoJuego">
+					<option selected></option>
+					<option value="Individual">Individual</option>
+					<option value="En equipo">En equipo</option>
+					<i></i>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Terreno de juego</p>
+			</div>
+			<div class="col">
+				<select id="ModificarTerrenoJuego">
+					<option selected></option>
+					<option value="Acuático">Acuático</option>
+					<option value="Terrestre">Terrestre</option>
+					<option value="Aéreo">Aéreo</option>
+					<i></i>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Cantidad de jugadores</p>
+			</div>
+			<div class="col">
+				<input type="number" id="ModificarCantidadJugadores">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Herramientas necesarias</p>
+			</div>
+			<div class="col">
+				<input type="text" id="ModificarHerramientasNecesarias">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Url del video</p>
+			</div>
+			<div class="col">
+				<input type="url" id="ModificarVideoUrl">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>Categoria</p>
+			</div>
+			<div class="col">
+				<select id="ModificarCategoria">
+					<option selected></option>
+					<option value="Deportes de motor">Deportes de motor</option>
+					<option value="Deportes de pelota">Deportes de pelota</option>
+					<option value="Deportes de tiro">Deportes de tiro</option>
+					<option value="Deportes extremos">Deportes extremos</option>
+					<i></i>
+				</select>
+			</div>
+		</div>
+		<div id="botonModificar">
+			<button id="modificarDeportes" type="button" class="btn btn-success" >Agregar deporte</button>
+		</div>
+	</div>
 	<h1>Deportes - TPI-2021  </h1>
-
-	<!-- <button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button> -->
 
 	<div id="formagregar">
 		<form class="formagregar">
@@ -149,31 +244,10 @@
 					<td><button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button></td>
 				</tr>
 			</table>
-
-			<!--p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p>
-			<div id="botonAgregar">
-				<button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button>
-			</div-->
 			<br>
-<!-- 			<ol>
-				<li>Click en la imagen para Acercamiento</li>
-				<li>Click en precio para ordenar Asc o Desc</li>
-			</ol> -->
-
 			<table id="tabla">
 				<thead>
 					<tr>
-						<!--th>id</th>
-						<th>Nombre</th>
-						<th>Descripción</th>
-						<th>Imagen</th>
-						<th>Modo juego</th>
-						<th>Terreno de juego</th>
-						<th id="jugadores">Cantidad de jugadores en el mundo</th>
-						<th>Herramientas necesarias</th>
-						<th>Video</th>
-						<th>Categoria</th>
-						<th>Eliminar</th-->
 						<th >id</th>
 						<th colspan='2'>Información relevante del deporte.</th>
 						<th id="jugadores">Jugadores</th>
