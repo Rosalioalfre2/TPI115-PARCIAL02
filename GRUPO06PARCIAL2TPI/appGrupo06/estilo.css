@@ -2,7 +2,7 @@ body{
     margin: 30px;
 }
 
-img {
+.imagenesDeportes{
   width: 5.60cm;
   height: 3.15cm;
   padding: 15px;
@@ -146,4 +146,24 @@ body{
 table#ordenamiento{
   background-color: #fff;
   border: #fff;
+}
+
+.ventanaModificar{
+  background:rgb(168, 168, 168);
+  width: 60%;
+  height: 70%;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: absolute;
+  left: 20%;
+  top: 15% ;
+  display: none;
+  position: fixed;
+}
+
+#cerrar{
+  position:absolute;
+  right: 10px;
+  top: 10px;
 }
