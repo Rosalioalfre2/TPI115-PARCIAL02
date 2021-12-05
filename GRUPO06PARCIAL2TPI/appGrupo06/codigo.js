@@ -1,6 +1,7 @@
 var deportes=null;
 var categorias=null;
 var id;
+var orden=0;
 
 obtenerDeportes()
 
@@ -19,7 +20,6 @@ function codigoCat(catstr) {
 //función para listar los deportes en las filas de la tabla de deportes
 function listarDeportes(deportes) {
 	var fila="<tr><td class='id' rowspan='8'></td><td>Nombre:</td><td class='Nombre'></td><td class='Cantidad' rowspan='8'></td><td>Imagen</td><td class='Eliminar' rowspan='8'></td></tr><tr><td>Modo de juego:</td><td class='Modo'></td><td class='Imagen' rowspan='3'></td></tr><tr><td>Terreno de juego:</td><td class='Terreno'></td></tr><tr><td>Categoría:</td><td class='Categoria'></td></tr><tr><td class='EncabezadoDescripcion' colspan='2'>Descripción:</td><td>Video</td></tr><tr><td class='Descripcion' colspan='2'></td><td class='Video' rowspan='3'></td></tr><tr><td class='EncabezadoHerramientas' colspan='2'>Herramientas necesarias:</td></tr><tr><td class='Herramientas' colspan='2'></td></tr><tr style='border: inset 0pt'><td colspan='6' class='Separador' style=' border: inset 0pt'></td></tr>";
-	var orden=0;
 	var cantidadJugadores = document.getElementById("jugadores");
 	cantidadJugadores.setAttribute("onclick","orden*=-1;listarDeportes(deportes);");
 	var num=deportes.length;
@@ -99,7 +99,6 @@ function listarDeportes(deportes) {
 		var separador=document.getElementsByClassName("EncabezadoHerramientas");
 		tr=separador[nfila].parentElement;
 		tr.setAttribute("class",catcode);
-		console.log(deportes[nfila].nombre_de_categoria)
 	}
 }
 
