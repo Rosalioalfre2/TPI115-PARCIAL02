@@ -29,34 +29,34 @@
 <body>
 	<div class="ventanaModificar" id="ventanaModificar">
 		<div id="cerrar"><a onclick="cerrarVentanaModificacion()"><img src="imagenes/cerrar.png"></a></div>
-		<h2>Modificar deporte</h2><br>
+		<h2>Modificar deporte</h2>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Nombre</p>
+				<p>Nombre:</p>
 			</div>
 			<div class="col-md-8">
 				<input type="text" id="ModificarNombre" class="entradas">
 			</div>
 		</div>
+		
 		<div class="row">
 			<div class="col-md-4">
-				<p>Descripción</p>
+				<p>Categoria:</p>
 			</div>
 			<div class="col-md-8">
-				<input type="text" id="ModificarDescripcion" class="entradas">
+				<select id="ModificarCategoria" class="entradas">
+					<option selected></option>
+					<option value="Deportes de motor">Deportes de motor</option>
+					<option value="Deportes de pelota">Deportes de pelota</option>
+					<option value="Deportes de tiro">Deportes de tiro</option>
+					<option value="Deportes extremos">Deportes extremos</option>
+					<i></i>
+				</select>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Url de imagen</p>
-			</div>
-			<div class="col-md-8">
-				<input type="url" id="ModificarImagenUrl" class="entradas">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<p>Modo de juego</p>
+				<p>Modo de juego:</p>
 			</div>
 			<div class="col-md-8">
 				<select id="ModificarModoJuego" class="entradas">
@@ -69,7 +69,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Terreno de juego</p>
+				<p>Terreno de juego:</p>
 			</div>
 			<div class="col-md-8">
 				<select id="ModificarTerrenoJuego" class="entradas">
@@ -83,7 +83,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Cantidad de jugadores</p>
+				<p>Cantidad de jugadores:</p>
 			</div>
 			<div class="col-md-8">
 				<input type="number" id="ModificarCantidadJugadores" class="entradas">
@@ -91,7 +91,15 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Herramientas necesarias</p>
+				<p>Descripción</p>
+			</div>
+			<div class="col-md-8">
+				<input type="text" id="ModificarDescripcion" class="entradas">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<p>Herramientas necesarias:</p>
 			</div>
 			<div class="col-md-8">
 				<input type="text" id="ModificarHerramientasNecesarias" class="entradas">
@@ -99,7 +107,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Url del video</p>
+				<p>Url del video:</p>
 			</div>
 			<div class="col-md-8">
 				<input type="url" id="ModificarVideoUrl" class="entradas">
@@ -107,21 +115,14 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				<p>Categoria</p>
+				<p>Url de imagen:</p>
 			</div>
 			<div class="col-md-8">
-				<select id="ModificarCategoria" class="entradas">
-					<option selected></option>
-					<option value="Deportes de motor">Deportes de motor</option>
-					<option value="Deportes de pelota">Deportes de pelota</option>
-					<option value="Deportes de tiro">Deportes de tiro</option>
-					<option value="Deportes extremos">Deportes extremos</option>
-					<i></i>
-				</select>
+				<input type="url" id="ModificarImagenUrl" class="entradas">
 			</div>
 		</div>
 		<div id="botonModificar">
-			<button id="modificarDeportes" type="button" class="btn btn-success" >Modificar deporte</button>
+			<button id="modificarDeportes" type="button" class="btn btn-success" style="font-size: 20px;">Modificar deporte</button>
 		</div>
 	</div>
 	<div id="encabezadoPagina">
@@ -130,37 +131,35 @@
 	<br>
 		<div id="formagregar">
 		<form class="formagregar">
-			<br>
 			<h2>Agregar Deporte</h2>
-			<br>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<p>Agregar nombre</p>
+						<p>Nombre:</p>
 					</div>
 					<div class="col-md-8">
 						<input type="text" id="AddNombre" class="entradas">
 					</div>
 				</div>
+				
 				<div class="row">
 					<div class="col-md-4">
-						<p>Descripción</p>
+						<p>Categoria:</p>
 					</div>
 					<div class="col-md-8">
-						<input type="text" id="AddDescripcion" class="entradas">
+						<select id="AddCategoria" class="entradas">
+							<option selected></option>
+							<option value="Deportes de motor">Deportes de motor</option>
+							<option value="Deportes de pelota">Deportes de pelota</option>
+							<option value="Deportes de tiro">Deportes de tiro</option>
+							<option value="Deportes extremos">Deportes extremos</option>
+							<i></i>
+						</select>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<p>Url de imagen</p>
-					</div>
-					<div class="col-md-8">
-						<input type="url" id="AddImagenUrl" class="entradas">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<p>Modo de juego</p>
+						<p>Modo de juego:</p>
 					</div>
 					<div class="col-md-8">
 						<select id="AddModoJuego" class="entradas">
@@ -173,7 +172,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<p>Terreno de juego</p>
+						<p>Terreno de juego:</p>
 					</div>
 					<div class="col-md-8">
 						<select id="AddTerrenoJuego" class="entradas">
@@ -187,7 +186,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<p>Cantidad de jugadores</p>
+						<p>Cantidad de jugadores:</p>
 					</div>
 					<div class="col-md-8">
 						<input type="number" id="AddCantidadJugadores" class="entradas">
@@ -195,7 +194,15 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<p>Herramientas necesarias</p>
+						<p>Descripción:</p>
+					</div>
+					<div class="col-md-8">
+						<input type="text" id="AddDescripcion" class="entradas">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<p>Herramientas necesarias:</p>
 					</div>
 					<div class="col-md-8">
 						<input type="text" id="AddHerramientasNecesarias" class="entradas">
@@ -203,35 +210,27 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<p>Url del video</p>
+						<p>Url del video:</p>
 					</div>
 					<div class="col-md-8">
 						<input type="url" id="AddVideoUrl" class="entradas">
 					</div>
 				</div>
+				
 				<div class="row">
 					<div class="col-md-4">
-						<p>Categoria</p>
+						<p>Url de imagen:</p>
 					</div>
 					<div class="col-md-8">
-						<select id="AddCategoria" class="entradas">
-							<option selected></option>
-							<option value="Deportes de motor">Deportes de motor</option>
-							<option value="Deportes de pelota">Deportes de pelota</option>
-							<option value="Deportes de tiro">Deportes de tiro</option>
-							<option value="Deportes extremos">Deportes extremos</option>
-							<i></i>
-						</select>
+						<input type="url" id="AddImagenUrl" class="entradas">
 					</div>
 				</div>
 			</div>
-			<br>
 			<div id="botonAgregar">
 				<button type="button" class="btn btn-success" onclick="agregarDeportes()">Agregar deporte</button>
 			</div>
 
 		 </form>
-		 <br>
 		</div>	
 
 	<br>
