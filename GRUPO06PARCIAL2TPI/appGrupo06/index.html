@@ -29,37 +29,37 @@
 <body>
 	<div class="ventanaModificar" id="ventanaModificar">
 		<div id="cerrar"><a onclick="cerrarVentanaModificacion()"><img src="imagenes/cerrar.png"></a></div>
-		<p>Modificar deporte</p>
+		<h2>Modificar deporte</h2><br>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Nombre</p>
 			</div>
-			<div class="col">
-				<input type="text" id="ModificarNombre">
+			<div class="col-md-8">
+				<input type="text" id="ModificarNombre" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Descripción</p>
 			</div>
-			<div class="col">
-				<input type="text" id="ModificarDescripcion">
+			<div class="col-md-8">
+				<input type="text" id="ModificarDescripcion" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Url de imagen</p>
 			</div>
-			<div class="col">
-				<input type="url" id="ModificarImagenUrl">
+			<div class="col-md-8">
+				<input type="url" id="ModificarImagenUrl" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Modo de juego</p>
 			</div>
-			<div class="col">
-				<select id="ModificarModoJuego">
+			<div class="col-md-8">
+				<select id="ModificarModoJuego" class="entradas">
 					<option selected></option>
 					<option value="Individual">Individual</option>
 					<option value="En equipo">En equipo</option>
@@ -68,11 +68,11 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Terreno de juego</p>
 			</div>
-			<div class="col">
-				<select id="ModificarTerrenoJuego">
+			<div class="col-md-8">
+				<select id="ModificarTerrenoJuego" class="entradas">
 					<option selected></option>
 					<option value="Acuático">Acuático</option>
 					<option value="Terrestre">Terrestre</option>
@@ -82,35 +82,35 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Cantidad de jugadores</p>
 			</div>
-			<div class="col">
-				<input type="number" id="ModificarCantidadJugadores">
+			<div class="col-md-8">
+				<input type="number" id="ModificarCantidadJugadores" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Herramientas necesarias</p>
 			</div>
-			<div class="col">
-				<input type="text" id="ModificarHerramientasNecesarias">
+			<div class="col-md-8">
+				<input type="text" id="ModificarHerramientasNecesarias" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Url del video</p>
 			</div>
-			<div class="col">
-				<input type="url" id="ModificarVideoUrl">
+			<div class="col-md-8">
+				<input type="url" id="ModificarVideoUrl" class="entradas">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-4">
 				<p>Categoria</p>
 			</div>
-			<div class="col">
-				<select id="ModificarCategoria">
+			<div class="col-md-8">
+				<select id="ModificarCategoria" class="entradas">
 					<option selected></option>
 					<option value="Deportes de motor">Deportes de motor</option>
 					<option value="Deportes de pelota">Deportes de pelota</option>
@@ -121,46 +121,49 @@
 			</div>
 		</div>
 		<div id="botonModificar">
-			<button id="modificarDeportes" type="button" class="btn btn-success" >Agregar deporte</button>
+			<button id="modificarDeportes" type="button" class="btn btn-success" >Modificar deporte</button>
 		</div>
 	</div>
-	<h1>Deportes - TPI-2021  </h1>
-
-	<div id="formagregar">
+	<div id="encabezadoPagina">
+	<h1>TPI-2021 GRUPO 06 - Deportes </h1>
+	</div>
+	<br>
+		<div id="formagregar">
 		<form class="formagregar">
+			<br>
 			<h2>Agregar Deporte</h2>
-
+			<br>
 			<div class="container">
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Agregar nombre</p>
 					</div>
-					<div class="col">
-						<input type="text" id="AddNombre">
+					<div class="col-md-8">
+						<input type="text" id="AddNombre" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Descripción</p>
 					</div>
-					<div class="col">
-						<input type="text" id="AddDescripcion">
+					<div class="col-md-8">
+						<input type="text" id="AddDescripcion" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Url de imagen</p>
 					</div>
-					<div class="col">
-						<input type="url" id="AddImagenUrl">
+					<div class="col-md-8">
+						<input type="url" id="AddImagenUrl" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Modo de juego</p>
 					</div>
-					<div class="col">
-						<select id="AddModoJuego">
+					<div class="col-md-8">
+						<select id="AddModoJuego" class="entradas">
 							<option selected></option>
 							<option value="Individual">Individual</option>
 							<option value="En equipo">En equipo</option>
@@ -169,11 +172,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Terreno de juego</p>
 					</div>
-					<div class="col">
-						<select id="AddTerrenoJuego">
+					<div class="col-md-8">
+						<select id="AddTerrenoJuego" class="entradas">
 							<option selected></option>
 							<option value="Acuático">Acuático</option>
 							<option value="Terrestre">Terrestre</option>
@@ -183,35 +186,35 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Cantidad de jugadores</p>
 					</div>
-					<div class="col">
-						<input type="number" id="AddCantidadJugadores">
+					<div class="col-md-8">
+						<input type="number" id="AddCantidadJugadores" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Herramientas necesarias</p>
 					</div>
-					<div class="col">
-						<input type="text" id="AddHerramientasNecesarias">
+					<div class="col-md-8">
+						<input type="text" id="AddHerramientasNecesarias" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Url del video</p>
 					</div>
-					<div class="col">
-						<input type="url" id="AddVideoUrl">
+					<div class="col-md-8">
+						<input type="url" id="AddVideoUrl" class="entradas">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md-4">
 						<p>Categoria</p>
 					</div>
-					<div class="col">
-						<select id="AddCategoria">
+					<div class="col-md-8">
+						<select id="AddCategoria" class="entradas">
 							<option selected></option>
 							<option value="Deportes de motor">Deportes de motor</option>
 							<option value="Deportes de pelota">Deportes de pelota</option>
@@ -222,28 +225,35 @@
 					</div>
 				</div>
 			</div>
+			<br>
 			<div id="botonAgregar">
 				<button type="button" class="btn btn-success" onclick="agregarDeportes()">Agregar deporte</button>
 			</div>
-<!-- 			<button onclick="obtenerDeportes();this.style.display='none';">Obtener Deportes</button> -->
+
 		 </form>
-	</div>
+		 <br>
+		</div>	
 
 	<br>
 	<div id="listado" style="display:none;">
 		<form name="filtrodeportes" id="filtrodeportes">
 			<h2>Seleccione Categorias</h2>
-				<input type="checkbox" id="c1" value="c1" checked>  Deportes de motor |  
+				
+				<input type="checkbox" id="c1" value="c1" checked>  Deportes de motor |
 				<input type="checkbox" id="c2" value="c2" checked>  Deportes de pelota |  
 				<input type="checkbox" id="c3" value="c3" checked>  Deportes de tiro |  
 				<input type="checkbox" id="c4" value="c4" checked> Deportes extremos |  
+				
 			<br>
-			<table id="ordenamiento">
-				<tr>
-					<td><p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p></td>
-					<td><button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button></td>
-				</tr>
-			</table>
+			<br>
+			<div class="row">
+				<div class="col-md-8">
+					<p style="text-align: center;">Click en "Cantidad de jugadores para ordenar de manera ascendente o descendente"</p>
+				</div>
+				<div class="col-md-4">
+					<button class="btn btn-success" onclick="obtenerDeportes()">Quitar ordenamiento de deportes</button>
+				</div>
+			</div>
 			<br>
 			<table id="tabla">
 				<thead>
@@ -262,5 +272,28 @@
 	</div>
 
 </body>
+
+<br>
+<footer>
+	<div class="container py-1">
+		<div class="row mt-1">
+			<div class="col-sm-12 col-md-4 tex-center text-white">
+				<h5 class="mt-1">Universidad de El Salvador</h5>
+				<p style="text-align: center; padding-left: 0%;">2021</p>
+			</div>
+
+			<div class="col-sm-12 col-md-4 tex-center text-white">
+				<h5 class="mt-1">&nbsp;&nbsp;&nbsp;	TPI-115</h5>
+				<p style="text-align: center; padding-left: 0%;">Todos los derechos reservados</p>
+			</div>
+
+			<div class="col-sm-12 col-md-4 tex-center text-white">
+				<h5 class="mt-1">Grupo: 06</h5>
+
+			</div>
+		</div>
+	</div>
+  </footer>
+
 
 </html>
