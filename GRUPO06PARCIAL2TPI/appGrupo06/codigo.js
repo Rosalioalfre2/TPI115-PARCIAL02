@@ -116,7 +116,7 @@ function obtenerDeportes() {
 	.then(data =>{
 		categorias=data;
 	})
-	
+	orden=0;
 }
 
 //funcion para agregar un deporte a la fake api rest y actualizar los deportes mostrados en la pagina

@@ -239,6 +239,66 @@
       "herramientas_necesarias": "Traje de baño, gorro de baño, gafas o googles, toalla, chanclas.",
       "video": "https://www.youtube.com/embed/9JKZ0xb-F_0",
       "id_categoria": 4
+    },
+    {
+      "nombre": "a",
+      "descripcion": "gfdsg",
+      "imagen": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Acuático",
+      "cantidad_de_jugadores": 3,
+      "herramientas_necesarias": "fdfs",
+      "video": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "id_categoria": 1,
+      "id": 21
+    },
+    {
+      "nombre": "a",
+      "descripcion": "a",
+      "imagen": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Acuático",
+      "cantidad_de_jugadores": 3,
+      "herramientas_necesarias": "a",
+      "video": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "id_categoria": 1,
+      "id": 22
+    },
+    {
+      "nombre": "a",
+      "descripcion": "a",
+      "imagen": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Acuático",
+      "cantidad_de_jugadores": 2,
+      "herramientas_necesarias": "a",
+      "video": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "id_categoria": 1,
+      "id": 23
+    },
+    {
+      "nombre": "a",
+      "descripcion": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "imagen": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Terrestre",
+      "cantidad_de_jugadores": 3,
+      "herramientas_necesarias": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "video": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "id_categoria": 1,
+      "id": 24
+    },
+    {
+      "nombre": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "descripcion": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "imagen": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "modo_de_juego": "Individual",
+      "terreno_de_juego": "Acuático",
+      "cantidad_de_jugadores": 2,
+      "herramientas_necesarias": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "video": "https://github.com/Rosalioalfre2/TPI115-PARCIAL02-APP",
+      "id_categoria": 1,
+      "id": 25
     }
   ],
   "categorias": [
